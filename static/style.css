@@ -1,1 +1,184 @@
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.blur-bg {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') center/cover fixed;
+    height: 100vh;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+.perfil {
+    border-radius: 50%;
+    width: 160px;
+    border: 3px solid #fff;
+}
+
+/* SOBRE */
+.section-glow {
+    background: radial-gradient(circle at top, #0d0d0d, #111);
+    padding: 100px 20px;
+    position: relative;
+}
+.section-glow::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+}
+
+/* SKILLS */
+.bg-gradient {
+    background: linear-gradient(135deg, #fafafa 0%, #f1f1f1 100%);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+.skill-card i {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* PROJETOS CINEMATOGRÁFICOS */
+.projetos {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+  color: white;
+}
+
+.projetos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 150, 255, 0.4);
+}
+
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projeto-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.1);
+  width: 300px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(0, 150, 255, 0.4);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(0, 150, 255, 0.3);
+}
+
+.projeto-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.3rem;
+  color: #00b4ff;
+}
+
+.projeto-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  padding: 0 15px 20px;
+  line-height: 1.4;
+}
+
+.projeto-card .btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: #00b4ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.projeto-card .btn:hover {
+  background: #0090cc;
+}
+
+/* ANIMAÇÃO SCROLL */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.section-glow, .skills-grid, .projects-section {
+    animation: fadeUp 1s ease forwards;
+}
+
+
+/* ROLAGEM SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Foto de perfil */
+.perfil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 150, 255, 0.6);
+}
 
