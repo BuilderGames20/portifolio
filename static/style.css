@@ -1,1 +1,32 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    projetos = [
+        {
+            "titulo": "Jogo Plataforma 2D",
+            "descricao": "Um jogo estilo retro inspirado em Hollow Knight, feito em Unity.",
+            "imagem": "projeto1.png",
+            "link": "#"
+        },
+        {
+            "titulo": "Ferramenta de Level Design",
+            "descricao": "Ferramenta interativa para criação de mapas intuitiva e fluida.",
+            "imagem": "projeto2.png",
+            "link": "#"
+        },
+        {
+            "titulo": "Protótipo Multiplayer",
+            "descricao": "Protótipo de um jogo multiplayer com sincronização em tempo real.",
+            "imagem": "projeto3.png",
+            "link": "#"
+        }
+    ]
+    
+    return render_template("index.html", projetos=projetos)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
